@@ -41,7 +41,42 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/InputReader.cs" />
+     <Compile Include="Assets/Scripts/Creatures/InputReader.cs" />
+     <Compile Include="Assets/Scripts/Creatures/HeroMover.cs" />
+     <Compile Include="Assets/Scripts/LayerCheck.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/CheckCircleOverlap.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/LayerCheck.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/EnterTriggerAction.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/BaseDetectionComponent.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/LineCastCheck.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/EnterCollisionComponent.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/EnterTriggerComponent.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/ExitTriggerComponent.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/StayTriggerComponent.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/ExitCollisionComponent.cs" />
+     <Compile Include="Assets/Scripts/ColliderBased/EnterEventComponent.cs" />
+     <Compile Include="Assets/Scripts/Utils/GameObjectExtensions.cs" />
+     <Compile Include="Assets/Scripts/Utils/HandlesUtils.cs" />
+     <Compile Include="Assets/Scripts/Utils/Disposable/ActionDisposable.cs" />
+     <Compile Include="Assets/Scripts/Utils/Disposable/CompositeDisposable.cs" />
+     <Compile Include="Assets/Scripts/Utils/Disposable/UnityEventExtensions.cs" />
+     <Compile Include="Assets/Scripts/Sound/PlaySoundsComponent.cs" />
+     <Compile Include="Assets/Scripts/Based/SpawnComponent.cs" />
+     <Compile Include="Assets/Scripts/Utils/SpawnUtils.cs" />
+     <Compile Include="Assets/Scripts/Utils/ObjectPool/Pool.cs" />
+     <Compile Include="Assets/Scripts/Utils/ObjectPool/PoolItem.cs" />
+     <Compile Include="Assets/Scripts/Based/SpawnListComponent.cs" />
+     <Compile Include="Assets/Scripts/Animation/AnimationClip.cs" />
+     <Compile Include="Assets/Scripts/Animation/SpriteAnimator.cs" />
+     <Compile Include="Assets/Scripts/Based/ReloadLevel.cs" />
+     <Compile Include="Assets/Scripts/UI/LevelLoader.cs" />
+     <Compile Include="Assets/Scripts/UI/HUD/HudController.cs" />
+     <Compile Include="Assets/Scripts/Utils/WIndowUtil.cs" />
+     <Compile Include="Assets/Scripts/UI/AnimatedWindowController.cs" />
+     <Compile Include="Assets/Scripts/Creatures/InputController.cs" />
+     <Compile Include="Assets/Scripts/Creatures/LoaderInputController.cs" />
+     <Compile Include="Assets/Scripts/Effects/ParallaxEffect.cs" />
+     <Compile Include="Assets/Scripts/GameSession.cs" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.5f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
