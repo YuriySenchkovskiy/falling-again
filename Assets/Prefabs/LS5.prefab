@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2252433454154384123}
   - component: {fileID: 2252433454154384124}
   - component: {fileID: 2252433454154384121}
-  - component: {fileID: 2252433454154384119}
   - component: {fileID: 2252433454154384120}
+  - component: {fileID: -2252535293205080115}
   m_Layer: 6
   m_Name: LS5
   m_TagString: Untagged
@@ -133,24 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.370316, y: 0.37243795}
   m_EdgeRadius: 0
---- !u!114 &2252433454154384119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2252433454154384125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5e74d8898404b22aae7bddcbcc844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _layer:
-    serializedVersion: 2
-    m_Bits: 256
-  _action:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &2252433454154384120
 Rigidbody2D:
   serializedVersion: 4
@@ -172,3 +154,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-2252535293205080115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2252433454154384125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d1028cc8ed4e89a39c36dc02821659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 25
