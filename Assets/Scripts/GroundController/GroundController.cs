@@ -16,14 +16,14 @@ namespace GroundController
         private int _counter;
 
         public Action HeroTouchedGround;
-        public Action HeroTouchedFinish;
+        public Action HeroTouchedFinish;    
         public Action HeroTouchedBottom;
         public Action<int> CalculatedToFinish;
         public Action<int> CalculatedToBottom;
         
         private void FixedUpdate()
         {
-            if (_finishLine[_counter] != null && _bottomLine[_counter] != null)
+            if (_counter < _finishLine.Length)
             {
                 _distanceToFinish = Mathf.CeilToInt(Vector2.Distance(_hero.transform.position, _finishLine[_counter].transform.position));
                 _distanceToBottom = Mathf.CeilToInt(Vector2.Distance(_hero.transform.position, _bottomLine[_counter].transform.position));

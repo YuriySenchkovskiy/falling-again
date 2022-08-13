@@ -65,6 +65,8 @@
      <Compile Include="Assets/Scripts/ColliderBased/LayerCheck.cs" />
      <Compile Include="Assets/Scripts/Creatures/InputController.cs" />
      <Compile Include="Assets/Scripts/Effects/ParallaxEffect.cs" />
+     <Compile Include="Assets/Scripts/Based/DestroyComponent.cs" />
+     <Compile Include="Assets/Scripts/GroundController/GroundController.cs" />
      <Compile Include="Assets/Scripts/Creatures/HeroMover.cs" />
      <Compile Include="Assets/Scripts/Based/ReloadLevel.cs" />
      <Compile Include="Assets/Scripts/Utils/WIndowUtil.cs" />
@@ -79,8 +81,6 @@
      <Compile Include="Assets/Scripts/ColliderBased/StayTriggerComponent.cs" />
      <Compile Include="Assets/Scripts/ColliderBased/ExitCollisionComponent.cs" />
      <Compile Include="Assets/Scripts/Based/SpawnListComponent.cs" />
-     <Compile Include="Assets/Scripts/GroundController/GroundController.cs" />
-     <Compile Include="Assets/Scripts/Based/DestroyComponent.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />

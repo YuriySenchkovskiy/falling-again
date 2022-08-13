@@ -42,6 +42,7 @@ namespace Creatures
         
         private static readonly int _isRunning = Animator.StringToHash("isRunning");
         private static readonly int _isGround = Animator.StringToHash("isGround");
+        private static readonly int VerticalVelocity = Animator.StringToHash("verticalVelocity");
         
         private void Awake()
         {
@@ -151,6 +152,7 @@ namespace Creatures
         private void UpdateAnimation() 
         {
             _animator.SetBool(_isGround, _isGrounded);
+            _animator.SetFloat(VerticalVelocity, _rigidbody2D.velocity.y); 
             _animator.SetBool(_isRunning, _direction.x != _zeroValue && SpeedField != _zeroValue && _isGrounded); 
         }
     }

@@ -35,12 +35,12 @@ namespace Animation
 
         private void OnBecameVisible() 
         {
-            enabled = _isPlaying;
+            //enabled = _isPlaying;
         }
 
         private void OnBecameInvisible()
         {
-            enabled = false;
+            //enabled = false;
         }
 
         private void Update()
