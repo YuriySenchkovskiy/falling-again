@@ -2,7 +2,7 @@ using UnityEngine;
 using Utils;
 using Utils.ObjectPool;
 
-namespace Components.GoBased
+namespace Based
 {
     public class SpawnComponent : MonoBehaviour
     {

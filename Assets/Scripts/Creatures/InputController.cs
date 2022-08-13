@@ -1,9 +1,8 @@
-using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Utils.Disposable;
 
-namespace Utils
+namespace Creatures
 {
     public class InputController : MonoBehaviour
     {

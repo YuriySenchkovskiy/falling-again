@@ -1,26 +1,78 @@
+using System;
+using TMPro;
 using UnityEngine;
-using Utils;
 
 namespace UI.HUD
 {
     public class HudController : MonoBehaviour
     {
-        [Space] [Header("Windows")] 
-        [SerializeField] private WindowUtil _windowUtil;
-        [SerializeField] private string _storePath;
-        [SerializeField] private string _mainMenu;
-        
-        public void ShowMainMenu()
+        [SerializeField] private TextGameObjectController _jumpText;
+        [SerializeField] private TextGameObjectController _toFinishText;
+        [SerializeField] private TextGameObjectController _toBottomText;
+        [SerializeField] private TextGameObjectController _winText;
+
+        private TMP_Text _finishText;
+        private TMP_Text _bottomText;
+        private string _metres = " m";
+        private GroundController.GroundController _groundController;
+
+        private void Awake()
         {
-            if (GetWindowStatus())
-            {
-                _windowUtil.CreateWindow(_mainMenu);
-            }
+            _groundController = FindObjectOfType<GroundController.GroundController>();
+            _groundController.HeroTouchedBottom += OnHeroTouchedBottom;
+            _groundController.HeroTouchedFinish += OnHeroTouchedFinish;
+            _groundController.HeroTouchedGround += OnHeroTouchedGround;
+
+            _groundController.CalculatedToFinish += OnCalculatedToFinish;
+            _groundController.CalculatedToBottom += OnCalculatedToBottom;
+
+            _finishText = _toFinishText.GetComponent<TMP_Text>();
+            _bottomText = _toBottomText.GetComponent<TMP_Text>();
         }
 
-        private bool GetWindowStatus()
+        private void OnDisable()
         {
-            return GetComponentInChildren<AnimatedWindowController>() == null;
+            _groundController.HeroTouchedBottom -= OnHeroTouchedBottom;
+            _groundController.HeroTouchedFinish -= OnHeroTouchedFinish;
+            _groundController.HeroTouchedGround -= OnHeroTouchedGround;
+            
+            _groundController.CalculatedToFinish -= OnCalculatedToFinish;
+            _groundController.CalculatedToBottom -= OnCalculatedToBottom;
+        }
+
+        private void OnHeroTouchedGround()
+        {
+            SetTextStatus(true);
+        }
+
+        private void OnHeroTouchedFinish()
+        {
+           _toBottomText.EndAnimation();
+           _toFinishText.EndAnimation();
+           _winText.gameObject.SetActive(true);
+        }
+
+        private void OnHeroTouchedBottom()
+        {
+            _toBottomText.EndAnimation();
+            _toFinishText.EndAnimation();
+        }
+
+        private void SetTextStatus(bool status)
+        {
+            _jumpText.gameObject.SetActive(status);
+            _toFinishText.gameObject.SetActive(status);
+            _toBottomText.gameObject.SetActive(status);
+        }
+
+        private void OnCalculatedToFinish(int distance)
+        {
+            _finishText.text = distance + _metres;
+        }
+
+        private void OnCalculatedToBottom(int distance)
+        {
+            _bottomText.text = distance + _metres;
         }
     }
 }

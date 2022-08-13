@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Components.ColliderBased
+namespace ColliderBased
 {
     [RequireComponent(typeof(Collider2D))]
     public class LayerCheck : MonoBehaviour

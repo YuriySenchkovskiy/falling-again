@@ -3,7 +3,7 @@ using UnityEngine;
 using Utils;
 using Utils.Disposable;
 
-namespace Components.ColliderBased
+namespace ColliderBased
 {
     public class EnterTriggerAction : MonoBehaviour
     {

@@ -1,26 +1,28 @@
-using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputReader : MonoBehaviour
+namespace Creatures
 {
-    private HeroMover _creatureMover;
-    private Vector2 _direction;
-
-    private void Awake()
+    public class InputReader : MonoBehaviour
     {
-        _creatureMover = GetComponent<HeroMover>();
-    }
+        private HeroMover _heroMover;
+        private Vector2 _direction;
 
-    public void DoHorizontalMovement(InputAction.CallbackContext context)
-    {
-        _direction.x = context.ReadValue<float>();
-        _creatureMover.SetDirection(_direction); 
-    }
+        private void Awake()
+        {
+            _heroMover = GetComponent<HeroMover>();
+        }
+
+        public void DoHorizontalMovement(InputAction.CallbackContext context)
+        {
+            _direction.x = context.ReadValue<float>();
+            _heroMover.SetDirection(_direction); 
+        }
         
-    public void DoJump(InputAction.CallbackContext context)
-    {
-        _direction.y = context.ReadValue<float>();
-        _creatureMover.SetDirection(_direction);
+        public void DoJump(InputAction.CallbackContext context)
+        {
+            _direction.y = context.ReadValue<float>();
+            _heroMover.SetDirection(_direction);
+        }
     }
 }

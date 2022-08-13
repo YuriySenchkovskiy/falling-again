@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Utils.Disposable;
 
-namespace UI
+namespace Creatures
 {
     public class LoaderInputController : MonoBehaviour
     {

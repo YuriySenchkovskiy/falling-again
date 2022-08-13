@@ -2,7 +2,7 @@ using Based;
 using Sound;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Creatures
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(SpawnListComponent), typeof(Animator))]
     public class HeroMover : MonoBehaviour

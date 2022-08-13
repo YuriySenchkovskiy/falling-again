@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Components.ColliderBased
+namespace ColliderBased
 {
     public class EnterCollisionComponent : BaseDetectionComponent
     {

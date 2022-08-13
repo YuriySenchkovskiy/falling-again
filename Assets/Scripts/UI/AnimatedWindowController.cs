@@ -1,7 +1,5 @@
-using Components.GoBased;
-using DefaultNamespace;
+using Creatures;
 using UnityEngine;
-using Utils;
 
 namespace UI
 {

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 #if UNITY_EDITOR
 #endif
 
-namespace Components.ColliderBased
+namespace ColliderBased
 {
     public class CheckCircleOverlap : MonoBehaviour
     {

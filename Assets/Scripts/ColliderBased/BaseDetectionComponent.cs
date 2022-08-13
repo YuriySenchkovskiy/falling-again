@@ -1,7 +1,7 @@
 using UnityEngine;
 using Utils;
 
-namespace Components.ColliderBased
+namespace ColliderBased
 {
     public abstract class BaseDetectionComponent : MonoBehaviour
     {
