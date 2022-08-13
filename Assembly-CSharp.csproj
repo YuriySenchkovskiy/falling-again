@@ -81,6 +81,9 @@
      <Compile Include="Assets/Scripts/ColliderBased/StayTriggerComponent.cs" />
      <Compile Include="Assets/Scripts/ColliderBased/ExitCollisionComponent.cs" />
      <Compile Include="Assets/Scripts/Based/SpawnListComponent.cs" />
+     <Compile Include="Assets/Scripts/Based/TimerComponent.cs" />
+     <Compile Include="Assets/Scripts/Based/RandomSpawnerComponent.cs" />
+     <Compile Include="Assets/Scripts/Based/ProbabilityDropComponent.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />

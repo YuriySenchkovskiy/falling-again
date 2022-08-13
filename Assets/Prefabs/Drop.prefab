@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6183854236339880243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6183854236339880242}
+  - component: {fileID: 2883061989824453622}
+  - component: {fileID: 4735514359200206513}
+  m_Layer: 0
+  m_Name: Drop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6183854236339880242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183854236339880243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2883061989824453622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183854236339880243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843e570ea70b486c9599a349e36a1998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _count: 1
+  _items:
+  - Item: {fileID: 4352869232263596472, guid: a3994d29a878744eaa65fbea333da1ff, type: 3}
+    Probability: 30
+  - Item: {fileID: 4352869232263596472, guid: 66103c63df2e648ffa599be009ae87fc, type: 3}
+    Probability: 30
+  - Item: {fileID: 4352869232263596472, guid: 72dc97b8899824bab9923850cca09339, type: 3}
+    Probability: 30
+  _dropCalculated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4735514359200206513}
+        m_TargetAssemblyTypeName: Based.RandomSpawnerComponent, Assembly-CSharp
+        m_MethodName: StartDrop
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _isSpawnOnEnable: 1
+--- !u!114 &4735514359200206513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6183854236339880243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22a1c9a176343c489a00d8fbba04c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sectorAngle: 0
+  _sectorRotation: 0
+  _waitTime: 0
+  _speed: 0
+  _isUsePool: 0

@@ -18,7 +18,6 @@ namespace Creatures
         private Vector3 _forwardScale = Vector3.one; 
         private Vector3 _backwardsScale = new Vector3(-1, 1, 1);
         
-        private float _defaultGravityScale;
         private int _zeroValue = 0;
         private float _minSpeed = 0.01f;
         
@@ -27,9 +26,10 @@ namespace Creatures
         [SerializeField, Range(0, 100)] private float _damageJumpLevel; 
         [SerializeField] private LayerCheck _layerCheck;
         [SerializeField] private string _jump = "Jump";
-        
+
         private bool _isGrounded; 
         private bool _isJumping;
+        private bool _isOnStartLevel = true;
         
         [Space] [Header("Particles")]
         [SerializeField] private string _run = "Run";
@@ -50,8 +50,6 @@ namespace Creatures
             _particles = GetComponent<SpawnListComponent>();
             _animator = GetComponent<Animator>();
             _sounds = GetComponent<PlaySoundsComponent>();
-            
-            _defaultGravityScale = _rigidbody2D.gravityScale;
         }
         
         private void Update()
@@ -72,6 +70,11 @@ namespace Creatures
         public void SetDirection(Vector2 direction)
         {
             _direction = direction; 
+        }
+
+        public void SetOffIsOnStartLevel()
+        {
+            _isOnStartLevel = false;
         }
         
         protected virtual float CalculateSpeed()
@@ -100,7 +103,13 @@ namespace Creatures
         
         private float CalculateYVelocity() 
         {
-            var yVelocity = _rigidbody2D.velocity.y; 
+            var yVelocity = _rigidbody2D.velocity.y;
+
+            if (_isOnStartLevel)
+            {
+                return yVelocity;
+            }
+            
             var isJumpPressed = _direction.y > 0;
             var lowJumpLevel = 0.85f;
             

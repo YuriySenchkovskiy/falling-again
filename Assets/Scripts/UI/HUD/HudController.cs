@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -54,8 +53,10 @@ namespace UI.HUD
 
         private void OnHeroTouchedBottom()
         {
-            _toBottomText.EndAnimation();
-            _toFinishText.EndAnimation();
+            // _toBottomText.EndAnimation();
+            // _toFinishText.EndAnimation();
+
+            SetTextStatus(false);
         }
 
         private void SetTextStatus(bool status)

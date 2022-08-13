@@ -8,5 +8,11 @@ namespace Based
         {
             Destroy(gameObject);
         }
+
+        public void DestroyAnotherGameObject(GameObject go)
+        {
+            Debug.Log("here");
+            Destroy(go);
+        }
     }
 }
