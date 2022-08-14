@@ -5,6 +5,7 @@ namespace UI
     public class MainMenu : MonoBehaviour
     {
         [SerializeField] private GameObject _playButton;
+        [SerializeField] private GameObject _controllInfo;
         [SerializeField] private string _sceneName;
         [SerializeField] private float _waitTime;
 
@@ -22,6 +23,11 @@ namespace UI
         private void TurnOnPlayButton()
         {
             _playButton.SetActive(true);
+
+            if (_controllInfo != null)
+            {
+                _controllInfo.gameObject.SetActive(true);
+            }
         }
     }
 }

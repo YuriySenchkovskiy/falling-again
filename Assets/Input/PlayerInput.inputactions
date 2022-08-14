@@ -39,7 +39,7 @@
                 {
                     "name": "positive",
                     "id": "f0f2cc88-6d78-498c-afce-d3da2187ddb1",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",

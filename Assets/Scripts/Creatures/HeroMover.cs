@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Creatures
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(SpawnListComponent), typeof(Animator))]
+    [RequireComponent(typeof(SfxSound))]
     public class HeroMover : MonoBehaviour
     {
         [Header("Movement")]
@@ -35,8 +36,8 @@ namespace Creatures
         [SerializeField] private string _run = "Run";
         
         private Animator _animator;
+        private SfxSound _sfxSound;
         private SpawnListComponent _particles;
-        private PlaySoundsComponent _sounds;
         private string _healSound = "Heal";
         private string _damageSound = "Damage";
         
@@ -49,7 +50,7 @@ namespace Creatures
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _particles = GetComponent<SpawnListComponent>();
             _animator = GetComponent<Animator>();
-            _sounds = GetComponent<PlaySoundsComponent>();
+            _sfxSound = GetComponent<SfxSound>();
         }
         
         private void Update()
@@ -147,7 +148,7 @@ namespace Creatures
         private void DoJumpVfx()
         {
             _particles.Spawn(_jump);
-            //_sounds.Play(_jump);
+            _sfxSound.Play();
         }
         
         private void SpawnFootDustInAnimation()
