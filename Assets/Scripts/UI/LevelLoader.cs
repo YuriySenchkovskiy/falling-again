@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -8,6 +9,7 @@ namespace UI
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private float _transitionTime;
+        [SerializeField] private Image _coffinImage;
 
         private const string LevelLoaderSceneName = "LevelLoader";
         private static readonly int Enabled = Animator.StringToHash("Enable");
@@ -30,8 +32,9 @@ namespace UI
             SceneManager.LoadScene(LevelLoaderSceneName, LoadSceneMode.Additive);
         }
         
-        public void LoadLevel(string sceneName)
+        public void LoadLevel(string sceneName, bool isTurnOnImage = false)
         {
+            _coffinImage.gameObject.SetActive(isTurnOnImage);
             StartCoroutine(StartAnimation(sceneName));
         }
         

@@ -441,9 +441,9 @@ MonoBehaviour:
     _allowNextClip: 0
     _sprites:
     - {fileID: -1197336222, guid: c03409ac9d0c6457ebac54bd4c6088c8, type: 3}
-    - {fileID: 1659689824, guid: c03409ac9d0c6457ebac54bd4c6088c8, type: 3}
     - {fileID: 176619817, guid: c03409ac9d0c6457ebac54bd4c6088c8, type: 3}
     - {fileID: -1887175953, guid: c03409ac9d0c6457ebac54bd4c6088c8, type: 3}
+    - {fileID: 1659689824, guid: c03409ac9d0c6457ebac54bd4c6088c8, type: 3}
     _complited:
       m_PersistentCalls:
         m_Calls: []

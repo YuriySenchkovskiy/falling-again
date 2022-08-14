@@ -10,7 +10,7 @@ namespace Based
         {
             var scene = SceneManager.GetActiveScene();
             var loader = FindObjectOfType<LevelLoader>();
-            loader.LoadLevel(scene.name);
+            loader.LoadLevel(scene.name, true);
         }
     }
 }
