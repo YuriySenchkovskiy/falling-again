@@ -48,11 +48,17 @@ MonoBehaviour:
   _count: 1
   _items:
   - Item: {fileID: 4352869232263596472, guid: a3994d29a878744eaa65fbea333da1ff, type: 3}
-    Probability: 30
+    Probability: 16
   - Item: {fileID: 4352869232263596472, guid: 66103c63df2e648ffa599be009ae87fc, type: 3}
-    Probability: 30
+    Probability: 16
+  - Item: {fileID: 4352869232263596472, guid: c6388de7ad9ab446986a83141360e999, type: 3}
+    Probability: 16
+  - Item: {fileID: 4352869232263596472, guid: be98992b95baf4bdd822167140669979, type: 3}
+    Probability: 16
   - Item: {fileID: 4352869232263596472, guid: 72dc97b8899824bab9923850cca09339, type: 3}
-    Probability: 30
+    Probability: 16
+  - Item: {fileID: 4352869232263596472, guid: d155e172f262f41df8ba4ee48b21c47a, type: 3}
+    Probability: 16
   _dropCalculated:
     m_PersistentCalls:
       m_Calls:
