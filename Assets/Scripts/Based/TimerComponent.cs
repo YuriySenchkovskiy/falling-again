@@ -10,11 +10,6 @@ namespace Based
     {
         [SerializeField] private bool _isCountFromStart;
         [SerializeField] private int _timerNumber;
-        [SerializeField] private float _multiplicator = 2;
-        [SerializeField] private bool _isUseRandom;
-        
-        [SerializeField] private float _fromValue;
-        [SerializeField] private float _toValue;
         [SerializeField] private TimerData[] _timers;
 
         private void Start()
@@ -28,8 +23,8 @@ namespace Based
         public void SetTimer(int index)
         {
             var timer = _timers[index];
-            var waitTime = _isUseRandom ? 
-                new WaitForSeconds(Random.Range(_fromValue, _toValue)) : new WaitForSeconds(timer.Delay  * _multiplicator);
+            var waitTime = timer.IsUseRandom ? 
+                new WaitForSeconds(Random.Range(timer.FromValue, timer.ToValue)) : new WaitForSeconds(timer.Delay);
             StartCoroutine(StartTimer(timer, waitTime));
         }
 
@@ -43,6 +38,9 @@ namespace Based
         public class TimerData
         {
             public float Delay;
+            public bool IsUseRandom;
+            public float FromValue;
+            public float ToValue;
             public UnityEvent EventAtTheEnd;
         }
     }
