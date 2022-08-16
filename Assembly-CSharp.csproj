@@ -86,6 +86,7 @@
      <Compile Include="Assets/Scripts/ColliderBased/ExitCollisionComponent.cs" />
      <Compile Include="Assets/Scripts/Based/SpawnListComponent.cs" />
      <Compile Include="Assets/Scripts/GroundController/BlockController.cs" />
+     <Compile Include="Assets/Scripts/Utils/DevLog.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
