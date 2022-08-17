@@ -7,7 +7,6 @@ namespace GroundController
 {
     public class GroundController : MonoBehaviour
     {
-        [SerializeField] private GameObject _destroyPosition;
         [SerializeField] private GameObject _finishLine;
         [SerializeField] private GameObject _bottomLine;
         [SerializeField] private HeroMover _hero;

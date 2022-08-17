@@ -1,3 +1,4 @@
+using ColliderBased;
 using UnityEngine;
 
 namespace Based
@@ -17,6 +18,11 @@ namespace Based
         public void Destroy()
         {
             Destroy(gameObject);
+        }
+
+        public void DestroyComponentAtObject()
+        {
+            Destroy(GetComponent<EnterTriggerComponent>());
         }
     }
 }
