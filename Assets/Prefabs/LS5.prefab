@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d1028cc8ed4e89a39c36dc02821659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 45
+  _time: 0
 --- !u!114 &-5696508696626612480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,8 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955b3b00d3ba4b57b4cd6f2c51b8d843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isCountFromStart: 0
-  _timerNumber: 0
+  _isCountFromStart: 1
+  _timerNumber: 1
   _timers:
   - Delay: 0
     IsUseRandom: 1
@@ -324,6 +324,49 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Delay: 0
+    IsUseRandom: 1
+    FromValue: 6
+    ToValue: 8
+    EventAtTheEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6280192132021017404}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8740606332772415785}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: -5696508696626612480}
+          m_TargetAssemblyTypeName: Animation.SpriteAnimator, Assembly-CSharp
+          m_MethodName: SetClip
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: destroy
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &5299611090419173303
@@ -447,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ec71007372455f860c989be70c5591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _verticalSpeed: -1
+  _startVerticalSpeed: -1.1
   _rigidbody: {fileID: 2252433454154384120}
 --- !u!1 &8496379667069532939
 GameObject:
