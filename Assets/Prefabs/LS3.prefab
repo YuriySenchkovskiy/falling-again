@@ -159,7 +159,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: f222d20c5088e4c97ba3a1de4c760628, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &6106863320429432996
 MonoBehaviour:
@@ -200,10 +200,42 @@ MonoBehaviour:
   - _name: destroy
     _loop: 0
     _random: 0
-    _allowNextClip: 0
+    _allowNextClip: 1
     _sprites:
     - {fileID: -1486870250, guid: 2f52af96b3e7d43c89be13a0e5334a21, type: 3}
     - {fileID: 1340092151, guid: 2f52af96b3e7d43c89be13a0e5334a21, type: 3}
+    _complited:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2252433454154384121}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 845478514972063030}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _name: destroyEnd
+    _loop: 0
+    _random: 0
+    _allowNextClip: 0
+    _sprites:
     - {fileID: 1245291112, guid: 2f52af96b3e7d43c89be13a0e5334a21, type: 3}
     - {fileID: -1353054361, guid: 2f52af96b3e7d43c89be13a0e5334a21, type: 3}
     - {fileID: -1091240478, guid: 2f52af96b3e7d43c89be13a0e5334a21, type: 3}
@@ -244,22 +276,10 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8080684635700449972}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6280192132021017404}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 6106863320429432996}
+        m_TargetAssemblyTypeName: Based.DestroyComponent, Assembly-CSharp
+        m_MethodName: DestroyComponentAtObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -333,30 +353,6 @@ MonoBehaviour:
     EventAtTheEnd:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6280192132021017404}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 8080684635700449972}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: -5696508696626612480}
           m_TargetAssemblyTypeName: Animation.SpriteAnimator, Assembly-CSharp
           m_MethodName: SetClip
@@ -538,7 +534,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0048086047, y: 0.016982555}
+  m_Offset: {x: -0.0048086047, y: 0.015023708}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -549,7 +545,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.619435, y: 0.47197723}
+  m_Size: {x: 1.619435, y: 0.55425453}
   m_EdgeRadius: 0
 --- !u!114 &8080684635700449972
 MonoBehaviour:
@@ -569,30 +565,6 @@ MonoBehaviour:
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6280192132021017404}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8080684635700449972}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: -5696508696626612480}
         m_TargetAssemblyTypeName: Animation.SpriteAnimator, Assembly-CSharp
         m_MethodName: SetClip
